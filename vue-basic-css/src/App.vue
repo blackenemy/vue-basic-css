@@ -3,10 +3,15 @@
     name:"App",
     data(){
       return{
-          pictue:"https://i.imgur.com/4ORVh6X.png"
+          Description:"Improve your front-end skills by building projects",
+          pictue:"../src/assets/images/image-qr-code.png"
       }
     }
   }
+  const photos = [
+    "favicon-32x32",
+    "image-qr-code"
+  ]
 
 </script>
 
@@ -14,8 +19,8 @@
   <body>
     <div class="card">
       <div class="card-containe">
-       <img v-bind:src="pictue" alt="">
-        <h3>Improve your front-end skills by building projects</h3> 
+       <img v-bind:src="pictue">
+        <h3>{{ Description }}</h3> 
         <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
       </div>
     </div>
