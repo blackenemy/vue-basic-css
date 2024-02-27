@@ -1,85 +1,77 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script >
+  export default{
+    name:"App",
+    data(){
+      return{
+          pictue:"https://i.imgur.com/4ORVh6X.png"
+      }
+    }
+  }
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <body>
+    <div class="card">
+      <div class="card-containe">
+       <img v-bind:src="pictue" alt="">
+        <h3>Improve your front-end skills by building projects</h3> 
+        <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+      </div>
     </div>
-  </header>
+  </body>
+    
+ 
 
-  <RouterView />
+ 
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.card{
+    width:19.2rem;
+    height:30rem;
+    border-radius:1rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:hsl(0, 0%, 100%);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.card-container{
+   height:93%;
+   width:89%;
+}
+body{
+  height:100vh;
+  background-color:hsl(212, 45%, 89%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  row-gap:1rem;
+}
+img{
+  width:100%;
+  height:30%;
+  border-radius:10px;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+h3,p{
+  text-align:center;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+h3{
+  font-size:1.3rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing:auto;
+  padding: 0.50rem;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+p{
+  font-size:0.98rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing:auto;
+  font-weight:180;
+  font-style:normal;
 }
 </style>
