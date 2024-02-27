@@ -4,7 +4,7 @@
     data(){
       return{
           Description:"Improve your front-end skills by building projects",
-          pictue:"../src/assets/images/image-qr-code.png"
+          pictue:"images/image-qr-code.png"
       }
     }
   }
